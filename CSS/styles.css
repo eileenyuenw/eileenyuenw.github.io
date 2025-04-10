@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+}
+
+header{
+    background-color: #4C191B;
+    color: #F7EBE8;
+    display: flex;
+        justify-content: space-between;
+        padding: 25px;
+}
+
+header p{
+    font-family: "Forum", serif;
+    font-size: 1.4rem;
+}
+
+.toggle{
+    /*border: 2px solid lime;*/
+    display: grid;
+}
+
+header button.nav-toggle{
+    width: 65px;
+    height: 65px;
+    padding: 0.5rem;
+    display: block;
+}
+
+header button{
+    /*min-height: 58px;*/
+    font-family: "Work Sans", sans-serif;
+    background-color: #F7EBE8;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    color: #4C191B;
+}
+
+header li{
+    padding: 1rem 0 0 0;
+}
+
+header a{
+    text-decoration: none;
+    color: #F7EBE8;
+    font-size: 1.2rem;
+}
+
+header a:hover, header a:focus{
+    text-decoration: underline;
+}
+
+.welcome{
+    /*border: 2px solid magenta;*/
+    margin: 2rem 1rem 2rem 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+    padding: 1rem 0 2rem 0;
+}
+
+.welcome h1{
+    font-family: "Forum", serif;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.welcome p{
+    font-size: 1.5rem;
+}
+
+.welcome button{
+    width: 40%;
+    padding: 0.8rem;
+    background-color: #963D5A;
+    color: #F7EBE8;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-family: "Work Sans", sans-serif;
+    transition: background-color 250ms ease-in-out;
+}
+
+.welcome button:hover, .welcome button:focus{
+    background-color: #e32462;
+}
+
+.form-div{
+    margin: 2rem 1rem 2rem 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form{
+    padding: 2rem;
+    display: flex;
+        flex-direction: column;
+}
+
+form p{
+    /*border: 2px solid red;*/
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+    font-weight: bold;
+}
+
+form label{
+    /*border: 2px solid aqua;*/
+    display: grid;
+    margin-bottom: 1.5rem;
+}
+
+form input{
+    margin-top: 1rem;
+    min-height: 50px;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    transition: border 200ms ease-in;
+}
+
+form input:hover, form input:focus{
+    border: 2px solid #a37ac2;
+    outline: none;
+}
+
+form button{
+    /*border: 2px solid lime;*/
+    min-height: 50px;
+
+    background-image: linear-gradient(to right,#963D5A, #a83283, #e32462, #e32462, #e32462,#e32462);
+    background-size: 250%;
+    background-position: 0 0;
+    color: #F7EBE8;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-family: "Work Sans", sans-serif;
+    transition: all 300ms ease-in-out;
+}
+
+form button:hover, form button:focus{
+    background-position: 100% 0;
+}
+
+.three-images{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 0.5rem 0 0.5rem 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.three-images div{
+    /*border: 2px solid red;*/
+    width: 90%;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.three-images img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.three-images img:hover{
+    animation: grow 1s ease-in-out;
+}
+
+@keyframes grow{
+    0% {
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+footer{
+    padding: 2rem;
+    background-color: #4C191B;
+    color: #F7EBE8;
+}
+
+.forum-regular {
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.work-sans-regular {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (min-width: 768px){
+    header{
+        align-items: center;
+    }
+
+    header button.nav-toggle {
+        display: none;
+    }
+
+    .toggle{
+        display: flex;
+    }
+
+    .nav-collapse ul{
+        display: flex;
+    }
+
+    .nav-collapse li{
+        padding-top: 0;
+        padding-right: 30px;
+    }
+
+    main{
+        display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+    }
+
+    .welcome{
+        width: 35%;
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+    }
+
+    .welcome button{
+        margin-top: 0.5rem;
+    }
+
+    .form-div{
+        width: 50%;
+    }
+
+    .three-images{
+        width: 95%;
+        display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2rem;
+    }
+
+    .three-images div{
+        width: 20%;
+        aspect-ratio: 1;
+    }
+
+    .three-images img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
